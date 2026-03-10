@@ -755,50 +755,224 @@ img {
   }
 }
 
-
-.about-grid{
-  display:grid;
-  grid-template-columns: 420px 1fr;
-  gap:40px;
-  align-items:start;
+/* =========================
+   ABOUT SECTION
+========================= */
+.about-section {
+  background: linear-gradient(180deg, #f7f8f3 0%, #f2f4ee 100%);
 }
 
-.about-left{
-  display:flex;
-  flex-direction:column;
+.about-header {
+  margin-bottom: 34px;
 }
 
-.about-logo{
-  width:180px;
-  margin-bottom:20px;
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.92fr 1.08fr;
+  gap: 28px;
+  align-items: stretch;
 }
 
-.about-left h3{
-  font-size:26px;
-  font-weight:700;
-  margin-bottom:6px;
+.about-left-card {
+  background: linear-gradient(180deg, #ffffff 0%, #fbfcf7 100%);
+  border-radius: 24px;
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.08);
+  padding: 30px 26px;
+  border-top: 5px solid var(--primary);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
-.subtitle{
-  color:#555;
-  font-size:16px;
+.about-logo-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 18px;
 }
 
-.about-right{
-  display:flex;
-  flex-direction:column;
-  gap:20px;
+.about-main-logo {
+  width: 180px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  filter: none !important;
 }
 
-.about-card{
-  background:white;
-  padding:30px;
-  border-radius:20px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+.about-left-card h3 {
+  font-size: 22px;
+  line-height: 1.35;
+  font-weight: 800;
+  color: var(--dark);
+  margin-bottom: 8px;
+  max-width: 420px;
 }
 
-.about-card p{
-  font-size:16px;
-  line-height:1.7;
-  margin-bottom:12px;
+.about-subtitle {
+  font-size: 17px;
+  color: var(--muted);
+  font-weight: 600;
+  margin-bottom: 22px;
+}
+
+.about-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.about-badge-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: rgba(140, 175, 26, 0.1);
+  border: 1px solid rgba(140, 175, 26, 0.22);
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.about-right {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  min-width: 0;
+}
+
+.about-card {
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 24px;
+  padding: 30px 30px;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.08);
+  min-width: 0;
+  border-left: 4px solid rgba(239, 46, 46, 0.14);
+}
+
+.about-card p {
+  font-size: 17px;
+  line-height: 1.85;
+  color: var(--text);
+  margin: 0;
+}
+
+.about-card p + p {
+  margin-top: 18px;
+}
+
+/* hover polish */
+.about-left-card:hover,
+.about-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.1);
+  transition: 0.25s ease;
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 992px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .about-left-card {
+    padding: 26px 22px;
+  }
+
+  .about-logo-wrap {
+    justify-content: flex-start;
+  }
+
+  .about-main-logo {
+    width: 155px;
+  }
+
+  .about-left-card h3 {
+    font-size: 21px;
+  }
+
+  .about-subtitle {
+    font-size: 16px;
+    margin-bottom: 18px;
+  }
+
+  .about-card {
+    padding: 24px 22px;
+  }
+
+  .about-card p {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 640px) {
+  .about-header {
+    margin-bottom: 26px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px;
+  }
+
+  .about-left-card {
+    padding: 22px 18px;
+    border-radius: 18px;
+  }
+
+  .about-logo-wrap {
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  .about-main-logo {
+    width: 130px;
+  }
+
+  .about-left-card h3 {
+    font-size: 19px;
+    line-height: 1.35;
+  }
+
+  .about-subtitle {
+    font-size: 15px;
+    margin-bottom: 16px;
+  }
+
+  .about-badges {
+    gap: 8px;
+  }
+
+  .about-badge-chip {
+    min-height: 34px;
+    padding: 0 12px;
+    font-size: 12px;
+  }
+
+  .about-right {
+    gap: 16px;
+  }
+
+  .about-card {
+    padding: 20px 16px;
+    border-radius: 16px;
+  }
+
+  .about-card p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
 }
