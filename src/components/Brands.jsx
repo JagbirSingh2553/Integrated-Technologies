@@ -38,7 +38,7 @@ export default function Brands() {
               <div className="brand-image-wrap">
                 <img src={brand.image} alt={brand.name} />
               </div>
-              <p>{brand.name}</p>
+              {/* <p>{brand.name}</p> */}
             </motion.div>
           ))}
         </div>
