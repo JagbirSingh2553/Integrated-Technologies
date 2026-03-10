@@ -408,12 +408,6 @@ img {
   color: var(--dark);
 }
 
-.about-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-}
-
 .info-card {
   padding: 30px;
   border: 1px solid rgba(0, 0, 0, 0.04);
@@ -677,7 +671,6 @@ img {
 
 @media (max-width: 992px) {
   .hero-grid,
-  .about-grid,
   .amc-grid,
   .contact-wrapper {
     grid-template-columns: 1fr;
@@ -760,4 +753,52 @@ img {
     bottom: 16px;
     padding: 12px 18px;
   }
+}
+
+
+.about-grid{
+  display:grid;
+  grid-template-columns: 420px 1fr;
+  gap:40px;
+  align-items:start;
+}
+
+.about-left{
+  display:flex;
+  flex-direction:column;
+}
+
+.about-logo{
+  width:180px;
+  margin-bottom:20px;
+}
+
+.about-left h3{
+  font-size:26px;
+  font-weight:700;
+  margin-bottom:6px;
+}
+
+.subtitle{
+  color:#555;
+  font-size:16px;
+}
+
+.about-right{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.about-card{
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.about-card p{
+  font-size:16px;
+  line-height:1.7;
+  margin-bottom:12px;
 }
