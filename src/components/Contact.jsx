@@ -65,9 +65,9 @@ export default function Contact() {
               Complex, Jhandewalan, Delhi - 110055
             </p>
 
-            <p>
+            {/* <p>
               <strong>Mobile:</strong> 9811075930
-            </p>
+            </p> */}
 
             <p>
               <strong>Landline:</strong> 011-42381305, 45081305
