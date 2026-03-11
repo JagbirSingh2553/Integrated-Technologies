@@ -9,7 +9,6 @@ import AMCSection from "./components/AMCSection";
 import WhyChooseUs from "./components/WhyChooseUs";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import WhatsAppButton from "./components/WhatsAppButton";
 
 export default function App() {
   return (
@@ -25,7 +24,6 @@ export default function App() {
       <WhyChooseUs />
       <Contact />
       <Footer />
-      <WhatsAppButton />
     </>
   );
 }
