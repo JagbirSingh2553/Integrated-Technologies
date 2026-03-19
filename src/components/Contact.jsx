@@ -1,41 +1,63 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
-
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
+    from_name: "",
+    from_email: "",
     phone: "",
-    message: ""
+    message: "",
   });
 
+  const [status, setStatus] = useState("");
+  const [isSending, setIsSending] = useState(false);
+
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    setFormData((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setStatus("");
+    setIsSending(true);
 
-    console.log("Form Submitted", formData);
+    try {
+      await emailjs.send(
+        "service_tg6v3md",
+        "template_aazvooq",
+        {
+          from_name: formData.from_name,
+          from_email: formData.from_email,
+          phone: formData.phone,
+          message: formData.message,
+        },
+        {
+          publicKey: "hUZ6lqFr0x6M2gpNF",
+        }
+      );
 
-    alert("Your enquiry has been submitted!");
-
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      message: ""
-    });
+      setStatus("Enquiry sent successfully.");
+      setFormData({
+        from_name: "",
+        from_email: "",
+        phone: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      setStatus("Failed to send enquiry. Please try again.");
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (
     <section id="contact" className="section contact-section">
       <div className="container">
-
         <motion.div
           className="section-header center"
           initial={{ opacity: 0, y: 24 }}
@@ -48,9 +70,6 @@ export default function Contact() {
         </motion.div>
 
         <div className="contact-wrapper">
-
-          {/* Company Info */}
-
           <motion.div
             className="contact-card-large reveal-card"
             initial={{ opacity: 0, y: 28 }}
@@ -65,9 +84,9 @@ export default function Contact() {
               Complex, Jhandewalan, Delhi - 110055
             </p>
 
-            {/* <p>
+            <p>
               <strong>Mobile:</strong> 9811075930
-            </p> */}
+            </p>
 
             <p>
               <strong>Landline:</strong> 011-42381305, 45081305
@@ -82,11 +101,7 @@ export default function Contact() {
               <span>MSME Registered</span>
               <span>GeM Registered</span>
             </div>
-
           </motion.div>
-
-
-          {/* Contact Form */}
 
           <motion.form
             onSubmit={handleSubmit}
@@ -96,23 +111,22 @@ export default function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.12 }}
           >
-
             <h3>Send Enquiry</h3>
 
             <input
               type="text"
-              name="name"
+              name="from_name"
               placeholder="Your Name"
-              value={formData.name}
+              value={formData.from_name}
               onChange={handleChange}
               required
             />
 
             <input
               type="email"
-              name="email"
+              name="from_email"
               placeholder="Email Address"
-              value={formData.email}
+              value={formData.from_email}
               onChange={handleChange}
               required
             />
@@ -134,12 +148,12 @@ export default function Contact() {
               required
             />
 
-            <button type="submit" className="btn-primary">
-              Submit Enquiry
+            <button type="submit" className="btn-primary" disabled={isSending}>
+              {isSending ? "Sending..." : "Submit Enquiry"}
             </button>
 
+            {status && <p className="form-status">{status}</p>}
           </motion.form>
-
         </div>
       </div>
     </section>
