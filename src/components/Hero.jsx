@@ -51,7 +51,7 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.15 }}
         >
           <div className="hero-card floating-card">
-            <img src="/gem-logo.png" alt="GeM Logo" className="hero-gem-logo" />
+            <img src="images/gem-logo.png" alt="GeM Logo" className="hero-gem-logo" />
             <h3>Single Platform for Multiple Office Needs</h3>
             <p>
               Sales, Services, Repair, Rental Support, Integrated AMC and

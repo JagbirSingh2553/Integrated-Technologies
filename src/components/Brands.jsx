@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 
 const brands = [
-  { name: "Kyocera", image: "/kyocera.png" },
-  { name: "Panasonic", image: "/panasonic.png" },
-  { name: "Eaton", image: "/eaton.png" },
-  { name: "Fujifilm", image: "/fujifilm.png" },
-  { name: "HP", image: "/hp.png" },
-  { name: "Promark", image: "/promark.png" },
+  { name: "Kyocera", image: "images/kyocera.png" },
+  { name: "Panasonic", image: "images/panasonic.png" },
+  { name: "Eaton", image: "images/eaton.png" },
+  { name: "Fujifilm", image: "images/fujifilm.png" },
+  { name: "HP", image: "images/hp.png" },
+  { name: "Promark", image: "images/promark.png" },
 ];
 
 export default function Brands() {

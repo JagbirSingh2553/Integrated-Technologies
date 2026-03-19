@@ -32,7 +32,7 @@ export default function About() {
           >
             <div className="about-logo-wrap">
               <img
-                src="/logo.png"
+                src="images/logo.png"
                 alt="Integrated Office Infrastructure Pvt. Ltd."
                 className="about-main-logo"
               />
