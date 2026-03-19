@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 
 const brands = [
-  { name: "Kyocera", image: "/images/kyocera-logo.png" },
-  { name: "Panasonic", image: "/images/panasonic.png" },
+  { name: "Kyocera", image: "/images/Kyocera-logo.png" },
+  { name: "Panasonic", image: "/images/Panasonic.png" },
   { name: "Eaton", image: "/images/eaton.png" },
-  { name: "Fujifilm", image: "/images/fujifilm.png" },
-  { name: "HP", image: "/images/hp.png" },
+  { name: "Fujifilm", image: "/images/Fujifilm.png" },
+  { name: "HP", image: "/images/Hp.png" },
   { name: "Promark", image: "/images/promark.png" },
 ];
 
