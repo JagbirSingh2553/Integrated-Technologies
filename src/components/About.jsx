@@ -61,7 +61,7 @@ export default function About() {
               <p>
                 Integrated Office Infrastructure Pvt. Ltd. is a system integrator
                 focused on executing turnkey projects and delivering reliable IT
-                and office infrastructure services.
+                and Office Infrastructure Services.
               </p>
               <p>
                 We have executed projects through Broadcast Engineering

@@ -54,8 +54,8 @@ export default function Hero() {
             <img src="/gem-logo.png" alt="GeM Logo" className="hero-gem-logo" />
             <h3>Single Platform for Multiple Office Needs</h3>
             <p>
-              Sales, services, repair, rental support, integrated AMC and
-              maintenance contracts for a wide range of office and IT equipment.
+              Sales, Services, Repair, Rental Support, Integrated AMC and
+              Maintenance Contracts for a wide range of office and IT equipment.
             </p>
 
             <ul>
