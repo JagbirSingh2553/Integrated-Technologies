@@ -19,6 +19,7 @@ export default function Navbar() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45 }}
         >
+          
           <img src="images/logo.png" alt="IOIPL Logo" className="brand-logo" />
           <div className="brand-text">
             <h2>Integrated Office Infrastructure Pvt. Ltd.</h2>
